@@ -1,38 +1,38 @@
-{% block navbar %}
-    <footer>
-        <nav>
-            <section>
-                <div>
-                    <button></button>
-                    <div>
-                        <a href="#">STRONA GŁÓWNA</a>
-                        <a href="#">MENU</a>
-                        <a href="#">PROMOCJE</a>
-                        <a href="#">LOKALE</a>
-                        <a href="#">O FIRMIE</a>
-                        <a href="#">DZIEJE SIĘ</a>
-                        <a href="#">FRANCZYZA</a>
-                        <a href="#">KARIERA</a>
-                        <a href="#">NASI PARTNERZY</a>
-                        <a href="#">TWOJA OPINIA</a>
-                    </div>
-                </div>
-                <div>
-                    <a href="#">
-                        <img src="#" alt="pizzeria logo">
-                    </a>
-                </div>
-            </section>
-            <section>
-                <p>
-                    <a href="#">MENU</a>
-                    <a href="#">PROMOCJE</a>
-                    <a href="#">LOKALE</a>
-                </p>
-            </section>
-            <section>
-                <p><a href="#">ZAMÓW ONLINE</a></p>
-            </section>
-        </nav>
+{% load static %}
+
+
+{% block footer %}
+    <footer class="container footer">
+        <section class="row">
+            <div class="col-xs-12 col-sm-3 col-md-3 item">
+                <a class="d-block" href="{% url 'kokpit:regulamin' %}">Regulamin serwisu</a>
+                <a class="d-block" href="{% url 'kokpit:handmade_and_fresh' %}">Handmade & Fresh</a>
+                <a class="d-block" href="{% url 'kokpit:alergeny' %}">Informacje o alergenach</a>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 item">
+                <a class="d-block" href="{% url 'kokpit:franczyza' %}">Franczyza</a>
+                <a class="d-block" href="{% url 'kokpit:tabela_kalorii' %}">Tabela kaloryczności</a>
+                <a class="d-block" href="{% url 'kokpit:partnerzy' %}">Nasi partnerzy</a>
+
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 item">
+                <a class="d-block" href="{% url 'kokpit:kontakt' %}">Kontakt</a>
+                <a class="d-block" href="{% url 'kokpit:kariera' %}">Kariera</a>
+                <a class="d-block" href="{% url 'kokpit:o_firmie' %}">O firmie</a>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 item">
+                <a class="d-block" href="{% url 'kokpit:opinie' %}">Twoja opinia</a>
+                <span class="d-block" >INFOLINIA<br>123 234 345</span>
+                <a href="http://www.facebook.com">
+                    <img src="{% static 'images/facebook.png' %}" alt="fb" width="30px" height="30px">
+                </a>
+                <a href="http://www.instagram.com">
+                    <img src="{% static 'images/instagram.png' %}" alt="insta" width="52px" height="52px">
+                </a>
+                <a href="http://www.twitter.com">
+                    <img src="{% static 'images/twitter.png' %}" alt="twitter" width="40px" height="40px">
+                </a>
+            </div>
+        </section>
     </footer>
-{% endblock navbar %}
+{% endblock footer %}
